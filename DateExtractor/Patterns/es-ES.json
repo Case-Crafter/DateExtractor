@@ -1,0 +1,31 @@
+{
+  "culture": "es-ES",
+  "delimiters": "/.-,",
+  "ordinals": [ "º", "ª" ],
+
+  "patterns": [
+    /* 1 ─ numeric  (17 4 2025, 17 4 25) */
+    {
+      "regex": "\\b\\d{1,2}\\s+\\d{1,2}\\s+\\d{2}(?:\\d{2})?\\b",
+      "format": [ "d M yyyy", "d M yy" ]
+    },
+
+    /* 2 ─ ISO 2025 04 17 */
+    {
+      "regex": "\\b\\d{4}\\s+\\d{2}\\s+\\d{2}\\b",
+      "format": "yyyy MM dd"
+    },
+
+    /* 3 ─ long month, “17 de abril 2025” */
+    {
+      "regex": "\\b\\d{1,2}\\s+de\\s+(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\\s+\\d{4}\\b",
+      "format": "d 'de' MMMM yyyy"
+    },
+
+    /* 4 ─ short month, “17 abr 2025” (rare but seen) */
+    {
+      "regex": "\\b\\d{1,2}\\s+(ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic)\\s+\\d{4}\\b",
+      "format": "d MMM yyyy"
+    }
+  ]
+}

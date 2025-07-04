@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Patterns\en-US.json" />
+    <None Remove="Patterns\es-ES.json" />
+    <None Remove="Patterns\nb-NO.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Patterns\en-US.json" />
+    <EmbeddedResource Include="Patterns\es-ES.json" />
+    <EmbeddedResource Include="Patterns\nb-NO.json" />
+    <EmbeddedResource Include="Patterns\pt-BR.json" />
+  </ItemGroup>
+
+</Project>

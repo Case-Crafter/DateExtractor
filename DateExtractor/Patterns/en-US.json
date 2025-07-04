@@ -1,0 +1,39 @@
+{
+  "culture": "en-US",
+  "delimiters": "/.-,", /* These characters will be replaced by space */
+  "ordinals": ["st", "nd", "rd", "th"], // (optional)
+  "patterns": [
+    {
+      /* 07/04/2025   7.4.25   7-4-2025 (delimiters are removed before parsing) */
+      "regex": "\\b\\d{1,2}\\s+\\d{1,2}\\s+\\d{2}(?:\\d{2})?\\b",
+      "format": [ "M d yyyy", "M d yy" ]
+    },
+    {
+      /* 2025-07-04 (dashes are removed before parsing) */
+      "regex": "\\b\\d{4}\\s+\\d{2}\\s+\\d{2}\\b",
+      "format": "yyyy MM dd"
+    },
+    {
+      /* July 4, 2025 / July 4, 25 (comma is removed before parsing) */
+      "regex": "\\b(january|february|march|april|may|june|july|august|september|october|november|december)\\s+\\d{1,2}\\s+\\d{2}(?:\\d{2})?\\b",
+      "format": [ "MMMM d yyyy", "MMMM d yy" ]
+    },
+    {
+      /* Jul 4, 2025 / Jul, 4 25 (comma is removed before parsing) */
+      "regex": "\\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\\s+\\d{1,2}\\s+\\d{2}(?:\\d{2})?\\b",
+      "format": [ "MMM d yyyy", "MMM d yy" ]
+    },
+
+    {
+      /* July 4, 2025 / July 4, 25 (comma is removed before parsing) */
+      "regex": "\\b\\d{1,2}\\s+(january|february|march|april|may|june|july|august|september|october|november|december)\\s+\\d{2}(?:\\d{2})?\\b",
+      "format": [ "d MMMM yyyy", "d MMMM yy" ]
+    },
+    {
+      /* Jul 4, 2025 / Jul, 4 25 (comma is removed before parsing) */
+      "regex": "\\b\\d{1,2}\\s+(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\\s+\\d{2}(?:\\d{2})?\\b",
+      "format": [ "d MMM yyyy", "d MMM yy" ]
+    }
+
+  ]
+}

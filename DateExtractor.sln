@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateExtractor", "DateExtractor\DateExtractor.csproj", "{230842C2-176A-41CD-9ED8-1FA8110A1430}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateExtractor.Tests", "DateExtractor.Tests\DateExtractor.Tests.csproj", "{FFD37B30-91D5-4934-A628-A14B928A57FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{230842C2-176A-41CD-9ED8-1FA8110A1430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{230842C2-176A-41CD-9ED8-1FA8110A1430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{230842C2-176A-41CD-9ED8-1FA8110A1430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{230842C2-176A-41CD-9ED8-1FA8110A1430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFD37B30-91D5-4934-A628-A14B928A57FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFD37B30-91D5-4934-A628-A14B928A57FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFD37B30-91D5-4934-A628-A14B928A57FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFD37B30-91D5-4934-A628-A14B928A57FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4444EC21-CC93-459A-B212-90C248D59CD7}
+	EndGlobalSection
+EndGlobal
