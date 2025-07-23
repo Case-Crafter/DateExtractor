@@ -18,8 +18,8 @@ namespace DateExtractor
     /// </summary>
     internal sealed class TextCleaner
     {
-        private static readonly Regex TabsAndNewlines = new(@"[\t\r\n]+", RegexOptions.Compiled);
-        private static readonly Regex MultiSpaces = new(@"\s{2,}", RegexOptions.Compiled);
+        private static readonly Regex TabsAndNewlines = new(@"[\t\r\n]+");
+        private static readonly Regex MultiSpaces = new(@"\s{2,}");
         private readonly Regex? _ordinalRegex;
 
         private readonly Regex? _delimRegex;   // null → no delimiter replacement
@@ -55,13 +55,13 @@ namespace DateExtractor
                 patternSb.Append('-');          // hyphen as *last* char = literal
 
             patternSb.Append(']');
-            _delimRegex = new Regex(patternSb.ToString(), RegexOptions.Compiled);
+            _delimRegex = new Regex(patternSb.ToString());
 
             if (ordinals is { Length: > 0 })
             {
                 var alternation = string.Join('|', ordinals.Select(Regex.Escape));
                 _ordinalRegex = new Regex($@"(?<=\d)\s*({alternation})\b",
-                    RegexOptions.IgnoreCase | RegexOptions.Compiled);
+                    RegexOptions.IgnoreCase);
             }
         }
 

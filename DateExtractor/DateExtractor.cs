@@ -184,7 +184,7 @@ namespace DateExtractor
 
                 compiled.Add(new PatternEntry(
                     new Regex(p.Regex,
-                        RegexOptions.Compiled | RegexOptions.IgnoreCase),
+                        RegexOptions.IgnoreCase),
                     fmts));
             }
 
